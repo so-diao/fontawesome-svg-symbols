@@ -14,9 +14,9 @@ function toKey(type, name) {
         case 'brands':
             return 'fab-' + name
         case 'solid':
-            return 'fas' + name
+            return 'fas-' + name
         case 'regular':
-            return 'far' + name
+            return 'far-' + name
     }
 }
 
@@ -43,4 +43,3 @@ function toContent() {
 
 
 fs.writeFileSync('fontawesome-svg-symbols.js', toContent())
-
