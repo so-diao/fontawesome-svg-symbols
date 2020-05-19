@@ -1,0 +1,25 @@
+;(function(win) {
+    var svgHTML = '{{content}}'
+    var styleHTML = '.svgfont {display: inline-block;width: 1em;height: 1em;fill: currentColor;vertical-align: -.15em;}'
+    var svgInject = false
+
+    function appendHTML() {
+        if ( !document.body || svgInject ) return
+        var style = document.createElement('style')
+        var svg = document.createElement('div')
+        style.innerHTML = styleHTML
+        svg.innerHTML = svgHTML
+        svg.style = 'display:none'
+        document.head.appendChild(style)
+        document.body.appendChild(svg)
+        svgInject = true
+    }
+
+    appendHTML()
+    if ( !document.onreadystatechange ) {
+        document.onreadystatechange = function() {
+            document.readyState === 'complete' && appendHTML()
+        }
+    }
+    document.addEventListener('DOMContentLoaded', appendHTML)
+})(window)
