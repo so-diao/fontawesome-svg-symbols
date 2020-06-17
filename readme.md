@@ -1,5 +1,5 @@
 # fontawesome-svg-symbols
-fontawesome的symbol版本。 [example](http://gitpages.wo2.me/fontawesome-svg-symbols/)
+fontawesome的symbol版本。 [example](http://gitpages.wo2.me/fontawesome-svg-symbols/example.html)
 
 # 使用
 引入`fontawesome-svg-symbols.js`文件后即可使用，需要注意的是命名的区别。
